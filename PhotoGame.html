@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: absolute;
+            width: 100px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="fa1()">Left</button>
+    <button onclick="fa2()">Right</button>
+    <button onclick="f3()">+</button>
+    <button onclick="f4()">-</button><br>
+    <img id="id1" src="Kr$na.jpg">
+    <script>
+        console.log(window.screen.availWidth);
+         b = 0;//this is variable that contain tag(element)
+         c = 0;
+        img_size = 100;
+        img_positon = 10;
+        function fa1(){
+            clearInterval(b);
+            b = setInterval(f1,10);
+        }
+        function fa2(){
+            clearInterval(b);
+            b = setInterval(f2,10);
+        }
+        function f1(){//for left size move
+            if(img_positon == 0){
+                img_positon=window.screen.availWidth-img_size;
+            }
+            a = document.getElementById("id1");
+            img_positon--;
+            a.style.left = img_positon + "px";
+        }
+        function f2(){//for right size move
+            if(img_positon == window.screen.availWidth-img_size){
+                img_positon=0;
+            }
+            a = document.getElementById("id1");
+            img_positon++;
+            a.style.left = img_positon + "px";
+        }
+        function f3(){//for size increze 
+            a = document.getElementById("id1");
+            img_size+=20;
+            a.style.width = img_size + "px";
+        }
+        function f4(){//for size decreze
+            a = document.getElementById("id1");
+            img_size-=20;
+            a.style.width = img_size + "px";
+        }
+    </script>
+</body>
+</html>
