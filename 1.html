@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //alert(a+b); say user to alert
+        //confirm(a+b); say user to conformation
+        //prompt('_____'); use for take input from user as String 
+        // this all three type to generate prompt in JS
+        // Three Type of Variable Declare in JS: 1)let    2)var    3)const(for constant value)
+        const a = parseFloat(prompt('Enter First Number:'));//parseFloat==String to Float data type Because 'prompt' always get String
+        const b = parseFloat(prompt('Enter Second Number:'));
+        const operation = prompt('Enter +,-,*,/,% any one operation:');
+        let result;
+        switch(operation){// Same as JAVA
+            case '+':
+                result = a+b;
+                break;
+            case '-':
+                result = a-b;
+                break;
+            case '*':
+                result = a*b;
+                break;
+            case '/':
+                result = a/b;
+                break;
+            case '%':
+                result = a%b;
+                break;
+        }
+        document.write(a+operation+b+"="+result);
+    </script>
+</body>
+</html>

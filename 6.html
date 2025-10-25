@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Enter Numner For Check It's Armstrong or Not:");
+        let digit = a.length,r,ans=0,temp;// Here lenght property is use only for String so we don't write here pasreInt() Because length is not use for int Ex, a="123" => a.length=3
+        temp=a;
+        //document.write(digit);
+        while(a>0){
+            r=a%10;
+            ans+=(r ** digit);
+            a = parseInt(a/10); 
+        }
+        if(temp==ans){
+            document.write(ans+" is Armstrong Number.");
+        }
+        else{
+            document.write(temp+" is not Armstrong Number.");
+        }
+    </script>
+</body>
+</html>

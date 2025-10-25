@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Enter Number For Check it's palindrome or Not:"));
+        let temp=a;
+        let rev=0,r;
+        while(a>0){
+            r=a%10;
+            rev = (rev*10)+r;
+            a= parseInt(a/10);//Let a=153 so 153/10 = 15.3 so it is Float. That reason we need to Specify a=parseInt(a/10); not to a=a/10;
+        }
+        if(temp==rev){
+            document.write(rev+' is Palindrome Number.');
+        }else{
+            document.write(temp+' is not Palindrome Number.');
+        }
+    </script>
+</body>
+</html>
