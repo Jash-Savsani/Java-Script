@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constant between a to a
+        let name = prompt("Enter String Between 'a'to'a':");
+        fi = name.indexOf('a');
+        li = name.lastIndexOf('a');
+        document.write(name+"<br>");
+        document.write(fi+" "+li+"<br>");
+        name=name.substring(fi+1,li);
+        document.write(name);
+    </script>
+</body>
+</html>

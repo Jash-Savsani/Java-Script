@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//num to word
+        let a = Number.parseInt(prompt("Enter Number between 100 to 999 : "));
+        if(a)
+    {
+        document.write(a+" is Number<br>");
+        if(a>=100 || a<=999)
+        {
+            document.write(a+" in valid Range.<br>");
+        }
+        else{
+            document.write(a+" in invalid Range.<br>");
+        }
+        let ones=['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine'];
+        let teens=['ten','eleven','tweleve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'];
+        let tens=['','','tewnty','thirty','fourty','fifty','sixty','seventy','eighty','ninty'];
+        let word = '';
+        b=a;
+        if(a>=100)
+        {
+            word += ones[Math.floor(a/100)]+' hundred ';
+            a=a%100;
+        }
+        if(a>=20)
+        {
+            word += tens[Math.floor(a/10)]+' ';
+            a=a%10;
+        }
+        if(a>=10)
+        {
+            a=a%10;
+            word += teens[Math.floor(a)]+' ';
+            a%=a;
+        }
+        if(a>=1 && a<10)
+        {
+            word += ones[Math.floor(a)]+' ';
+        }
+        document.write(b+" : "+word);
+    }
+    else{
+        document.write("Please Enter Number");
+    } 
+    </script>
+</body>
+</html>

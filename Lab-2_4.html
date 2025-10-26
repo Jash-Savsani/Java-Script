@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a1 = Number.parseInt(prompt("Enter First Number for GCD:"));
+        let a2 = Number.parseInt(prompt("Enter Second Number for GCD:"));
+        for(i=1;i<=Math.min(a1,a2);i++)
+    {
+        if(a1%i==0 && a2%i==0)
+    {
+        temp=i;
+    }
+    }
+    document.write("Greatest Common Factor of "+a1+" and "+a2+" is: "+temp);
+    </script>
+</body>
+</html>

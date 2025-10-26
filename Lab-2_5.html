@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--46 ==> 4 ni 6power-->
+    <script>
+        let n =parseInt(prompt("Enter Number of Two Digit: "));
+        if(n>=10 && n<=99){
+            fd = Math.floor(n/10);
+            ld = n % 10;
+            ans = fd ** ld;
+            document.write("Answer is : "+ans);
+        }
+        else{
+            document.write("Given "+n+" is not Two Digit Number.");
+        }
+        
+    </script>
+</body>
+</html>

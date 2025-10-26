@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a1 = Number.parseInt(prompt("Enter First Number:"));
+        let a2 = Number.parseInt(prompt("Enter Second Number:"));
+        document.write("Prime Numbers Between "+a1+" to "+a2+" is:");
+        for(i=a1+1;i<a2;i++)
+        {
+            flag=true;
+            for(j=2;j<i;j++)
+            {
+                if(i % j == 0)
+                {
+                    flag=false;
+                    break;
+                }
+            }
+            if(flag){//or flag==true
+                document.write(i +", ");
+            }
+        }
+    </script>
+</body>
+</html>
