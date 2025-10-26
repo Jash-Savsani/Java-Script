@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//bubble sort
+        let n = parseInt(prompt("Enter Total Number Of Elements to Insert in Array: "));
+        let a = [];
+        for(i=0;i<n;i++)
+    {
+        a.push(parseInt(prompt("Enter Array Element "+(i+1)+" : ")));
+    }
+    for(i=0;i<a.length;i++)
+    {
+        for(j=1;j<(a.length-i);j++)
+        {
+            if(a[j]<a[j-1])
+            {
+                temp=a[j-1];
+                a[j-1]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<a.length;i++)
+    {
+        if(i==0)
+        {
+            document.write("Assending By Bubble Sort : a = [");
+        }
+        document.write(a[i]+" ,");
+        if(i==(a.length-1))
+        {
+            document.write("]");
+        }
+     }
+    </script>
+</body>
+</html>

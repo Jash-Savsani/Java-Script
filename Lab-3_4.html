@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>//quick sort( program haju baaki che.) 
+    
+    function quickSort(a)
+    {
+        if(a.length<=1)
+        { 
+            return a;
+        }
+        let pivot  = a[Math.floor(a.length/2)];    
+        let  left=[];
+        let  right=[];
+        let  middle=[];
+        let i;
+        for(i=0;i<a.length;i++)
+        {
+            if(a[i]<pivot){
+                left.push(a[i]);
+            }
+            else if(a[i]>pivot){
+                right.push(a[i]);
+            }
+            else{
+                middle.push(a[i]);//this element is equal to middle(pivot) elemnt
+            }            
+        }
+        return [...quickSort(left),...middle,...quickSort(right)];
+    }
+    let n= parseInt(prompt("Enter Total Number of Elements:"));
+    if(isNaN(n) || n<=0){
+        document.write("Invalid Input");
+    }
+    else
+    {
+        let a =[];
+        for(i=0;i<n;i++){
+            a.push(parseInt(prompt("Enter "+(i+1)+" Element:  ")));
+        }
+        console.log("Oroginal Array: "+a);
+        document.write("Sorted Array: "+quickSort(a).join(", "));   
+    }
+    
+    </script>
+</body>
+</html>
