@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: black;
+    }
+    svg {
+      padding-right: 5px;
+      position: relative;
+      top: 7px;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      border: 1px solid orangered;
+      background-color:black;
+      color: orangered;
+      font-size: large;
+      font-weight: bolder;
+    }
+
+    .a1 {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      height: 25%;
+      width: 40%;
+      border: 1px solid orangered;
+      border-start-start-radius: 50%;
+      border-start-end-radius: 50%;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 15px;
+    }
+
+    .a2 {
+      display: inline-block;
+      font-size: x-large;
+      font-weight: bolder;
+      padding: 5px 10px 0px 10px;
+      color: orangered;
+    }
+
+    .a4 {
+      height: 200px;
+      width: 40%;
+    }
+    .a4 input{
+      background-color: black;
+      height: 200px;
+      width: 100%;
+      border: 10px solid orangered;
+    }
+    .a3 {
+      position:  relative;
+      bottom:20px ;
+      margin-top: 55px;
+      margin-left: 550px;
+      border-radius: 10%;
+    }
+
+    .a5 {
+      position: relative;
+      right: 1px;
+      height: 30%;
+      width: 40%;
+      left: 0px;
+      display: flex;
+      justify-content: space-around;
+
+    }
+
+    .a6 {
+      background-color: orangered;
+      height: 35px;
+      width: 100%;
+      border: 1px solid orangered;
+    }
+
+    .a7 {
+      background-color: orangered;
+      height: 45px;
+      width: 100%;
+      border: 1px solid orangered;
+    }
+    .a8{
+      position: relative;
+    }
+    h3 {
+      color: green;
+      margin-left: 60px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 900;
+      position: relative;
+      right: 60px;
+    }
+
+    .a7 :hover {
+      background-color: rgb(130, 12, 12);
+    }
+
+    .a6 :hover {
+      background-color: rgb(130, 12, 12);
+    }
+    #i1 button {
+      background-color: orangered; 
+      color: black;
+    }
+    #i1 :hover{
+      background-color:rgb(180, 164, 164);
+      color: rgb(124, 17, 17);
+    }
+    #screen{
+      color: green;
+      font-size: 1.3cm;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="a3">
+    <h3>SCIENTIFIC CALCULATOR</h3>
+    <div class="a1">
+      <div class="a8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orangered" class="bi bi-filter-left"
+          viewBox="0 0 16 16">
+          <path
+            d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+        </svg>
+        <p class="a2">Scientific</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orangered" class="bi bi-folder-symlink-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3M2.19 3q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742" />
+        </svg>
+      </div>
+      <div>
+        <svg style="margin-top: 10px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="orangered"
+          class="bi bi-clock" viewBox="0 0 16 16">
+          <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+        </svg>
+      </div>
+    </div>
+    <div class="a4">
+      <input type="text" id="screen">
+    </div>
+    <div class="a5">
+      <div class="a6">
+        <button>
+          MC
+        </button>
+      </div>
+      <div class="a6">
+        <button>
+          MR
+        </button>
+      </div>
+      <div class="a6">
+        <button>
+          M+
+        </button>
+      </div>
+      <div class="a6">
+        <button>
+          M-
+        </button>
+      </div>
+      <div class="a6">
+        <button>
+          MS
+        </button>
+      </div>
+      <div class="a6">
+        <button>
+          M^
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button>
+          %
+        </button>
+      </div>
+      <div class="a7">
+        <button>
+          CE
+        </button>
+      </div>
+      <div class="a7">
+        <button onclick="f1()" value="C">
+          C
+        </button>
+      </div>
+      <div class="a7">
+        <button onclick="f4()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+            class="bi bi-backspace-fill" viewBox="0 0 16 16">
+            <path
+              d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button onclick="f7()">
+          1
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="padding: 0px 0px 0px 0px;"
+            fill="currentColor" class="bi bi-slash-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0" />
+          </svg>
+          X
+        </button>
+      </div>
+      <div class="a7">
+        <button onclick="f5()" id="dosquare">
+          X<sup>2</sup>
+        </button>
+      </div>
+      <div class="a7">
+        <button onclick="f6()">
+          <sup>2</sup><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-alt" viewBox="0 0 16 16">
+            <path
+              d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5m10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5" />
+          </svg>
+          X
+        </button>
+      </div>
+      <div class="a7">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-infinity"
+            viewBox="0 0 16 16">
+            <path
+              d="M5.68 5.792 7.345 7.75 5.681 9.708a2.75 2.75 0 1 1 0-3.916ZM8 6.978 6.416 5.113l-.014-.015a3.75 3.75 0 1 0 0 5.304l.014-.015L8 8.522l1.584 1.865.014.015a3.75 3.75 0 1 0 0-5.304l-.014.015zm.656.772 1.663-1.958a2.75 2.75 0 1 1 0 3.916z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button onclick="f2('7')" value="7" id="j">
+          7
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('8')" value="8" id="j">
+          8
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('9')" value="9" id="j">
+          9
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('*')" value="*" id="j">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button  onclick="f2('4')" value="4" id="j">
+          4
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('5')" value="5" id="j">
+          5
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('6')" value="6" id="j">
+          6
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('-')" value="-" id="j">
+          _
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button  onclick="f2('1')" value="1" id="j">
+          1
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('2')" value="2" id="j">
+          2
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('3')" value="3" id="j">
+          3
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('+')" value="+" id="j">
+          +
+        </button>
+      </div>
+    </div>
+    <div class="a5">
+      <div class="a7">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+            class="bi bi-plus-slash-minus" viewBox="0 0 16 16">
+            <path
+              d="m1.854 14.854 13-13a.5.5 0 0 0-.708-.708l-13 13a.5.5 0 0 0 .708.708M4 1a.5.5 0 0 1 .5.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2A.5.5 0 0 1 4 1m5 11a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5A.5.5 0 0 1 9 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('0')" value="0" id="j">
+          0
+        </button>
+      </div>
+      <div class="a7">
+        <button  onclick="f2('.')" value="." id="j">
+          .
+        </button>
+      </div>
+      <div class="a7" id="i1">
+        <button  onclick="f3('=')" value="=">
+          =
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+    <script>
+      function f1(){
+        n = document.getElementById("screen");
+        n.value="";
+      }
+      function f2(value){
+        n = document.getElementById("screen");
+        n.value+=value;
+      }
+      function f3(final){
+        n = document.getElementById("screen");
+        final = eval(n.value);
+        n.value = final;
+      }
+      function f4(){
+        n = document.getElementById("screen");
+        n.value = n.value.substr(0,(n.value.length-1));         
+      }
+      function f5(){
+        n = document.getElementById("screen");
+        n.value = "("+n.value+")*("+n.value+")";
+      }
+      function f6(){
+        n = document.getElementById("screen");
+        n.value = Math.sqrt(n.value);
+      }
+      function f7(){
+        n = document.getElementById("screen");
+        n.value = "1/"+n.value;
+      } 
+     </script>
+</body>
+</html>
+<!--<!DOCTYPE html> code of : HTML અને CSS માં જ્યારે તમે કોઈ <div> ની position એના parent tag (માતા tag) ના respect માં બદલવી હોય, ત્યારે CSS Positioning properties નો ઉપયોગ કરો છો.
+<html>
+<head>
+  <style>
+    .parent {
+     position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: lightblue;
+    }
+    .child {
+      position: absolute;
+      top: 80px;
+      left: 110px;
+      background-color: coral;
+      
+    }
+  </style>
+</head>
+<body>
+
+<div class="parent">
+  <div class="child">Child Div</div>
+</div>
+
+</body>
+</html>
+-->
+</body>
+</html>

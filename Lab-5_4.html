@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-color: palevioletred;
+        }
+    .a1{
+        position: absolute;
+        left: 40vw;
+        top: 15vh;
+        border: 1px solid black;
+        padding: 5px;
+        background-color: lightblue;
+        color:blue;
+    }
+</style>
+</head>
+<body>
+    <div class="a1">
+    <form> <!--onsubmit="f1()-->
+        <h2>Login Page</h2>
+        <p>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+        </p>
+        <p>
+            <label for="repeat_password">Repeat Password:</label>
+            <input type="password" id="repeat_password">
+        </p>
+        <p>
+            <label for="age">Age:</label>
+            <input type="text" id="age">
+        </p>
+        <p>
+            <label for="enroll_no">Enrollment No:</label>
+            <input type="text" id="enroll_no">
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+        </p>
+        <button onclick="f1()" style="color: blue; position: relative; left: 100px;">Click Me</button>
+    </form>
+    </div>
+    <script>
+        function f1(){
+            ref1 = document.getElementById("name");
+            p1 = "^[a-zA-Z_.]{8,}$";
+            reg1 = new RegExp(p1);
+            if(!reg1.test(ref1.value)){
+                alert('username must be of minimum 8 characters');
+            }
+
+
+            ref2 = document.getElementById("password");
+            p2 = "^(?=.\d)(?=.[!@#$%^&])[A-Za-z\d!@#$%^&]{8,12}$";
+            reg2 = new RegExp(p2);
+            ref3 = document.getElementById("repeat_password");
+            p3 = "^(?=.\d)(?=.[!@#$%^&])[A-Za-z\d!@#$%^&]{8,12}$";
+            reg3 = new RegExp(p3);
+            if(reg2.test(ref2.value) || reg3.test(ref3.value)){/*Here is Doubt For Condition*/
+                alert('password must contain at least 1 digit and 1 special character and should be between 8-12 characters');
+            }
+             else{
+                /*This Comment Execute When Password is Correct*/
+             }
+
+
+            date = document.getElementById("age").value;
+            a = new Date(date);
+            y = a.getFullYear();
+            age = 2025-y;
+            if(!age>18){
+                alert('Age Must be 18 plus')
+            }
+
+            ref4 = document.getElementById("enroll_no");
+            p4 = "^[0-9]{11}$";
+            reg4 = new RegExp(p4);
+            if(!reg4.test(ref4.value)){
+                alert('enrollment must be of 11 digits');
+            }
+
+            ref5 = document.getElementById("email");
+            p5 = "^[a-zA-Z0-9._%+-]+@[a-zA-Z.]{2,}$";
+            reg5 = new RegExp(p5);
+            if(!reg5.test(ref5.value)){
+                alert('email validation');
+            }
+    }
+    </script>
+</body>
+</html>

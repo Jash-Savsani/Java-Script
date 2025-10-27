@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1{
+            position: absolute;
+            top: 150px;
+            left: 560px;
+            height: 400px;
+            width: 350px;
+            border: 1px solid black;
+        }
+        .a2{
+            height: 15%;
+            width: 100%;
+            background-color: darkblue;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 250%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a3{
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+        }
+        .a4{
+            position: relative;
+            top: 10px;
+            left: 60px;
+            text-decoration: none;
+            font-size: 20px;
+            color: blue;
+        }
+        .a5{
+            position: relative;
+            width: 80%;
+            left: 10%;
+            height: 25px;
+            text-align: center;
+        }
+        .a6{
+            position: relative;
+            width: 40%;
+            left: 30%;
+            height: 35px;
+            border-radius: 15%;
+            color: white;
+            font-size: 17px;
+            background-color: rgb(66, 145, 2);;
+            border: 1px solid rgb(66, 145, 2);
+        }
+        .a7{
+            position: relative;
+            bottom: 15px;
+            left: 100px;
+            text-decoration: none;
+            color: rgb(36, 149, 190);
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">
+        <div class="a2"><p>SHOPOS</p></div>
+        <form name="form">
+        <div class="a3"> 
+            <a href="#" class="a4">Sign into access this netwotk</a>
+            <input type="text" id="id1" name="username" class="a5" placeholder="Name">
+            <input type="text" id="id2" name="password" class="a5" placeholder="Password">
+            <button class="a6" onclick="f1()">Sign In</button>
+            <a href="#" class="a7">Access the User Portal</a>
+        </div>
+        </form>
+    </div>
+    <script>
+        function f1(){//type-1
+            a = document.forms["form"];
+            b = a.username.value;
+            c = a.password.value;
+            if(b=="Jash" && c=="4000"){
+                alert('Welcome');
+            }
+            else{
+                alert('Invalid Username Or Password');
+            } 
+        }
+        // function f1(){//type-2
+        //     a = document.getElementsByTagName("input");
+        //     if(a[0].value=="Jash" && a[1].value=="4000"){
+        //             alert('Welcome');
+        //     }
+        //     else{
+        //         alert('Invalid Username Or Password');
+        //     }
+            
+        // }
+    </script>
+</body>
+</html>
