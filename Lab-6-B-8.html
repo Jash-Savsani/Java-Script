@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+       input{
+        color: red;
+        height: 100px;
+        width: 100vw;
+        font-size: xx-large;
+        text-align: center;
+       }
+       button{
+        height: 75px;
+        width: 150px;
+        border-radius: 0.5cm;
+        color: red;
+        background-color: yellow;
+        font-size: 0.5cm
+       } 
+    </style>
+</head>
+<body>
+   <input type="text" value="Heading" onmouseleave="colorBlack()" onmousemove="colorYellow()">
+ <button onclick="getTimeDate()">Find Time & Date</button>
+ <button onclick="change_BackGroundColor(event)">Red</button>
+ <button onclick="change_BackGroundColor(event)">Green</button>
+ <script>
+     bd_ref = document.getElementsByTagName("body");
+    ip_ref = document.getElementsByTagName("input");
+    function colorYellow(){
+        ip_ref[0].style.backgroundColor="yellow";    
+    }
+    function colorBlack(){
+        ip_ref[0].style.backgroundColor="black";
+    }
+    function getTimeDate(){
+        let d = new Date("2025-12-10");
+        console.log(d.toLocaleDateString()); 
+    }
+    function change_BackGroundColor(e){
+        if(e.target.innerHTML=='Red'){
+            bd_ref[0].style.backgroundColor="red";        
+        }
+        else{
+            bd_ref[0].style.backgroundColor="green";
+        }
+    }
+ </script>
+</body>
+</html>

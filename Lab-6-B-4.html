@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onreset="onReset()" onsubmit="onSubmit(event)"><!--WAP to recognize which form event is ƒired. -->
+        <label for="f_input">Enter First Name:</label>
+        <input type="text" onblur="onBlur()" id="f_input"><br><br>
+        <label for="l_input">Enter Last Name:</label>
+        <input type="text"  onfocus="onFocus()" id="l_input"><br><br>
+        Select Gender:
+        <input name="Gender" id="male" value="male" type="radio">
+        <label for="male">Male</label>
+        <input name="Gender" id="female" value="female" type="radio">
+        <label for="female">Female</label><br><br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <script>
+        b = false;
+        function onBlur(){
+            console.log("Onblur Done.");
+            b=true;
+        }
+        function onFocus(){
+            console.log("OnFocus Done.");
+            b=true;
+        }
+        function onSubmit(e){
+            if(b==false){
+                e.preventDefault();
+            }
+            console.log("Onsubmit Done.");
+        }
+        function onReset(){
+            console.log("Reset Done.");
+            b=true;
+        }
+        //same as onchange and onselect uses
+    </script>
+</body>
+</html>

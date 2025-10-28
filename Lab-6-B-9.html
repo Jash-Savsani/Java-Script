@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ Enter String:<input onkeyup="check_Vowel(event)" type="text">
+ <script>
+    bd_ref = document.getElementsByTagName("body");
+    function check_Vowel(e){
+        if(e.keyCode==65 || e.keyCode==69 || e.keyCode==73 || e.keyCode==79 || e.keyCode==85){
+            bd_ref[0].style.backgroundColor="blue";
+        }
+        else{
+            bd_ref[0].style.backgroundColor="white";
+        }
+    }
+ </script>
+</body>
+</html>

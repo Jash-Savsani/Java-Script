@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rebeccapurple;
+            color:palevioletred ;
+        }
+        div{
+            position: absolute;
+            top:350px;
+            left: 700px;
+            background-color: palevioletred;
+            color: blue;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Hello World
+    </div>
+    <button onclick="f1()">Click Me</button>
+    <script>//change 5 proprtices of HTML using JS
+        function f1(){
+            b = document.getElementsByTagName("body");
+            b[0].style.backgroundColor="palevioletred";
+            div = document.getElementsByTagName("div");
+            div[0].style.backgroundColor="blue";
+            div[0].style.color="palevioletred";
+            div[0].fontSize="0.5cm";
+            div[0].style.border="5px solid yellow";
+            div[0].style.width="500px"; 
+        }
+    </script>
+</body>
+</html>

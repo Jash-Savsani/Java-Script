@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- WAP to recognize which keyboard event is ƒired.-->
+    <div> 
+    <button  onkeyup="keyup()">Onkeyup</button>
+     <input type="text" value="onkeypress" onkeypress="keypress()">
+     <button onkeydown="keydown()">Onkeydown</button>
+ </div>
+ <script>
+    function keyup(){
+        alert('Onekeyup Done.');
+    }
+    function keypress(){
+        alert('Onkeypress Done.');
+    }
+    function keydown(){
+        alert('Onkeydown Done.');
+    }
+ </script>
+</body>
+</html>

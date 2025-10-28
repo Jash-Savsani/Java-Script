@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="mouseEvent1(event)">onclick</button>
+    <button ondblclick="mouseEvent2(event)">ondblclick</button>
+    <button onmousedown="mouseEvent3(event)">onmousedown</button>
+    <button onmousemove="mouseEvent4(event)">onmousemove</button>
+    <button onmouseover="mouseEvent5(event)">onmouseover</button>
+    <button onmouseout="mouseEvent6(event)">onmousout</button>
+    <button onmouseup="mouseEvent7(event)">onmouseup</button>       
+    <script>//WAP to recognize which mouse event is ƒired
+        function mouseEvent1(e){
+            alert('Onclick Done');
+        }
+        function mouseEvent2(e){
+            alert('Ondbclick Done');
+        }
+        function mouseEvent3(e){
+            alert('Onmousedown Done');
+        }
+        function mouseEvent4(e){
+            alert('Onmousemove Done');
+        }
+        function mouseEvent5(e){
+            alert('Onmouseover Done');
+        }
+        function mouseEvent6(e){
+            alert('Onmouseout Done');
+        }
+        function mouseEvent7(e){
+            alert('Onmouseup Done');
+        }
+    </script>
+</body>
+</html>

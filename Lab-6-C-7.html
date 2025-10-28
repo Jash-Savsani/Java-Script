@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        array = [];
+        while (1) {
+            letter = prompt("Enter C(create) or U(update) or R(reset) or D(delete):");
+            if (letter == null) {
+                break;
+            }
+            if (letter == 'C') {
+                newAdded = prompt('Enter New Element');
+                array.push(newAdded);
+            }
+            if (letter == 'U') {
+                position = parseInt(prompt("Enter Element Index to Channge It's value:"));
+                newAdded = prompt("Enter new Element:");
+                array[position-1] = newAdded;
+            }
+            if (letter == 'R') {
+                position = parseInt(prompt("Enter Element Index to Reset It's value to null:"));
+                array[position-1] = null;
+            }
+            if (letter == 'D') {
+                position = parseInt(prompt("Enter Element Index to Delete:"));
+                array.splice(position-1);
+            }
+            console.log(array);
+        }
+
+    </script>
+</body>
+
+</html>

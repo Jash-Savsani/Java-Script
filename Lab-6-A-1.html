@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      button{
+        position: absolute;
+        left: 40vw;
+        background-color: white;
+        border: 5px solid black;
+        border-radius: 15%;
+        top: 47vh; 
+        height: 30px;
+        width: 100px;
+      }
+      .button{
+        position: absolute;
+        top: 47vh;
+        left: 48vw;
+      }
+    </style>
+</head>
+<body>
+  <!--WAP to change background color on click of button.-->
+  <button onclick="start()">Start</button>
+  <button class="button" onclick="stop()">Stop</button> 
+  <script>
+    a=0;
+    function start(){
+      a = setInterval(changeBackgroundColor,100);
+    }
+    function changeBackgroundColor(){
+        r = Math.floor(Math.random()*256);
+        g = Math.floor(Math.random()*256);
+        b = Math.floor(Math.random()*256);
+        ele = document.getElementsByTagName("body");
+        ele[0].style.backgroundColor = `rgb(${r},${g},${b})`;
+    }
+    function stop(){
+      clearInterval(a);
+    }
+  </script> 
+</body>
+</html>
