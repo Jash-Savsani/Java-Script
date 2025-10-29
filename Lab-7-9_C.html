@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(0, 122, 204);
+        }
+
+        #id1 {
+            position: absolute;
+            width: 100px;
+            left: 550px;
+            top: 80px;
+        }
+
+        #khavanu {
+            position: absolute;
+            width: 25px;
+            top: 100px;
+            left: 100px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 5px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 35px;
+            width: 130px;
+            font-size: medium;
+        }
+
+        button :hover {
+            background-color: red;
+        }
+
+        .div {
+            height: 30px;
+            position: absolute;
+            top: 10px;
+            left: 160px;
+            padding: 5px;
+            background-color: darkblue;
+            color: white;
+            border: 1px solid orangered;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #id {
+            position: absolute;
+            top: 10px;
+            padding: 5px;
+            left: 235px;
+        }
+
+        .jash {
+            display: inline;
+        }
+    </style>
+</head>
+<body onkeyup="abc(event)">
+    <img id="id1" src="CSnack.jpg">
+    <img id="khavanu" src="CApple.jpg">
+    <div class="jash"><button onclick="movekhavanu()">Start Game</button><br>
+        <div class="div">Score:<span id="score">0</span></div><br>
+        <div class="div" id="id">LifeLine:<span id="lifeline">5</span></div>
+    </div>
+    <script>
+        alert('Enter Start Game to Play Game.');
+        let randomX;
+        let randomY;
+        b = 0;//this is variable that contain tag(element)
+        c = 0;
+        let score = -1;
+        let life_line = 5;
+        let img_size = 100;
+        let img_positon = 10;//for left-right
+        let img_top = 100;//for top-bottom
+        function fa1() {
+            clearInterval(b);
+            b = setInterval(f1, 10);
+        }
+        function fa2() {
+            clearInterval(b);
+            b = setInterval(f2, 10);
+        }
+        function fa5() {
+            clearInterval(b);
+            b = setInterval(f5, 10);
+        }
+        function fa6() {
+            clearInterval(b);
+            b = setInterval(f6, 10);
+        }
+        function f1() {//for left size move
+            if (img_positon == 0) {
+                img_positon = window.screen.availWidth - img_size;
+                l_l = document.getElementById("lifeline");
+                l_l.innerHTML = --life_line;
+                if (life_line == 0) {
+                    document.write("<img style='position:absolute; left:451px; top:50px' src='gameover.jpg'>");
+                    body = document.getElementsByTagName("body");
+                    body[0].style.backgroundColor = "red";
+                }
+            }
+            //((img_top <= randomY) && (randomY - img_top < img_size)) && ((img_positon - (randomX - img_size) == 0) || ((randomX - 10 - img_positon == 0)))
+            if (((img_top <= randomY) && (randomY - img_top < img_size)) && ((img_positon - (randomX - img_size) == 0) || ((randomX - 10 - img_positon == 0)))){
+                movekhavanu();
+            }
+            a = document.getElementById("id1");
+            img_positon--;
+            a.style.left = img_positon + "px";
+            a.style.transform = 'scaleX(1)';
+        }
+        function f2() {//for right size move
+            if (img_positon == window.screen.availWidth - img_size) {
+                img_positon = 0;
+                l_l = document.getElementById("lifeline");
+                l_l.innerHTML = --life_line;
+                if (life_line == 0) {
+                    document.write("<img style='position:absolute; left:451px; top:50px' src='gameover.jpg'>");
+                    body = document.getElementsByTagName("body");
+                    body[0].style.backgroundColor = "red";
+                }
+            }
+            if (((img_top <= randomY) && (randomY - img_top < img_size)) && ((img_positon - (randomX - img_size) == 0) || ((randomX - 10 - img_positon == 0)))) {
+                movekhavanu();
+            }
+            a = document.getElementById("id1");
+            img_positon++;
+            a.style.left = img_positon + "px";
+            a.style.transform = 'scaleX(-1)';
+
+        }
+        function f3() {//for size increze 
+            a = document.getElementById("id1");
+            img_size += 20;
+            a.style.width = img_size + "px";
+        }
+        function f4() {//for size decreze
+            a = document.getElementById("id1");
+            img_size -= 20;
+            a.style.width = img_size + "px";
+        }
+        function f5() {//for top move
+            if (img_top == 0) {
+                img_top = window.screen.availHeight - img_size;
+                l_l = document.getElementById("lifeline");
+                l_l.innerHTML = --life_line;
+                if (life_line == 0) {
+                    document.write("<img style='position:absolute; left:451px; top:50px' src='gameover.jpg'>");
+                    body = document.getElementsByTagName("body");
+                    body[0].style.backgroundColor = "red";
+                }
+            }
+            if (((img_top <= randomY) && (randomY - img_top < img_size)) && ((img_positon - (randomX - img_size) == 0) || ((randomX - 10 - img_positon == 0)))) {
+                movekhavanu();
+            }
+            a = document.getElementById("id1");
+            img_top--;
+            a.style.top = img_top + "px";
+            a.style.transform = 'rotate(90deg)';
+        }
+        function f6() {//for bottom move
+            if (img_top == window.screen.availHeight - (2 * img_size)) {
+                img_top = 0;
+                l_l = document.getElementById("lifeline");
+                l_l.innerHTML = --life_line;
+                if (life_line == 0) {
+                    document.write("<img style='position:absolute; left:451px; top:50px' src='gameover.jpg'>");
+                    body = document.getElementsByTagName("body");
+                    body[0].style.backgroundColor = "red";
+                }
+            }
+            if (((img_top <= randomY) && (randomY - img_top < img_size)) && ((img_positon - (randomX - img_size) == 0) || ((randomX - 10 - img_positon == 0)))) {
+                movekhavanu();
+            }
+            a = document.getElementById("id1");
+            img_top++;
+            a.style.top = img_top + "px";
+            a.style.transform = 'rotate(270deg)';
+        }
+        function abc(e){
+            if (e.key == 'ArrowRight') {
+                fa2();
+            }
+            if (e.key == 'ArrowLeft') {
+                fa1();
+            }
+            if (e.key == 'ArrowUp') {
+                fa5();
+            }
+            if (e.key == 'ArrowDown') {
+                fa6();
+            }
+        }
+        function movekhavanu() {
+            if (score == -1) {
+                alert('Use Keyboard Up,Down,Right,Left Key To Move Snake.');
+            }
+            k = document.getElementById("khavanu");
+            randomX = parseInt((Math.random() * (screen.availWidth - 30)));
+            randomY = parseInt((Math.random() * (screen.availHeight - 30)));
+            k.style.top = randomY + "px";
+            k.style.left = randomX + "px";
+
+            sc = document.getElementById("score");
+            sc.innerHTML = ++score;
+            if (score == 5) {
+                document.write("<img style='position:absolute; left:451px; top:100px' src='gamewin.jpg'>");
+                body = document.getElementsByTagName("body");
+                body[0].style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+
+</html>

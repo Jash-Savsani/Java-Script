@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+<script>
+    // Demonstrate the difference between let and var.
+	function f1(){
+    	var a = 10;
+        if(true){
+        	let a = 10;
+            console.log(a);
+        }
+        console.log(a);
+    }
+    f1();
+    function f2(){
+        let a = 10;
+        if(true){
+            var a = 10;
+            console.log(a);
+        }
+        console.log(a);//for this statement error comes
+    }
+    f1();
+    f2();
+</script>
+</body>
+</html>

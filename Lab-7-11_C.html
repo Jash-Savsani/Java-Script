@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Tracker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <nav>
+    <h1>B.Sc(Hons).C.S Student Attendance Tracker</h1>
+    </nav>
+    <div class="forcompleteemptyspace">Attendance List</div>
+    <div class="d4">
+        <div id="id1" class="d5">
+            <div class="d6">
+                Total Absent Students
+            </div>
+            <div class="d7" id="absent_Students">
+                <!--Number of Present Students-->
+            </div>
+        </div>
+        <div id="id2" class="d5">
+            <div class="d6">
+                Total Present Students
+            </div>
+            <div class="d7" id="present_Students">
+                <!--Number of Present Students-->
+            </div>
+        </div>
+        <div id="id3" class="d5">
+            <div class="d6">
+                Total Padding Attendence
+            </div>
+            <div class="d7" id="pandding_Students">
+                <!--Number of Present Students-->
+            </div>
+        </div>
+    </div>
+    <script>
+        let name = [ "Savsani Jash",  "Godhani Dimpal",  "Kakkad Dhruv",  "Bhoraniya Aryan",  "Divan Mahek",  "Jakasaniya Darshan",  "Dalsaniya Nensi",  "Limbasiya Dhruv",  "Doshi Labdhi",  "Thummar Astha", "Nishi Chikani",  "Vajpara Archana",  "Nandha Isha",  "Katakia Aastha",  "Bheda Zalak",  "Fichadiya Yash",  "Hirpara Rutvik",  "Seladiya Mahek",  "Sapovadiya Nandani",  "Virja Dhruviben",  "Bhut Srushti",  "Rabari Dharvi",  "Gadara Dhruv",  "Viramgama Krishna",
+            "Gupta Sanjana",  "Makadia Sahil",  "Vasoya Manav",  "Dharajiya Hardik",  "Bhensadadiya Riya",  "Kakwani Vinaben",  "Chaudhari Mufiz",  "Trivedi Pooja",  "Krunal Kasundra",  "Vaghasiya Princi",  "Hadiyal Sanjana",  "Gandha Gautam",  "Sangani Aanchal",  "Vajpara Rucha",  "Suchak Kasak",  "Patel Drashti",  "Gami Charmi",  "Vadsola Drashti",  "Ajudiya Krushiben",  "Ranipa Drashti", "Sherasiya Rohil","Kanani Pari", "Aryan Mehta", "Dhruv Shah", "Vivaan Patel", "Aditya Desai", "Rudra Joshi", "Krish Bhatt", "Yash Solanki", "Rohan Soni",
+            "Harsh Patel", "Kunal Trivedi", "Soham Raval", "Parth Dave", "Aarav Shukla", "Manav Chauhan", "Atharv Rana", "Darsh Gohil",
+            "Devansh Modi", "Arjun Thakkar", "Kabir Vyas", "Ishaan Gandhi", "Sanket Rawal", "Ritik Choksi", "Vansh Kapadia",
+            "Pranav Barot", "Chirag Shah", "Jaydeep Bhagat", "Neel Bhandari", "Ankit Gajjar", "Tirth Panchal", "Raj Yagnik",
+            "Sagar Mahajan", "Ronit Pathak", "Meet Vora", "Nirav Malhotra", "Laksh Jain", "Het Shah", "Utsav Mistry", "Viraj Chauhan",
+            "Veer Solanki", "Ansh Joshi", "Moksh Baxi", "Rajveer Khanna", "Sparsh Chaudhary", "Ayush Bansal", "Tejas Singh",
+            "Aman Jadhav", "Naitik Dholakia", "Kartik Sheth", "Bhavin Parekh", "Yuvraj Rathod", "Dharmik Suthar", "Naresh Bhimani",
+            "Karan Upadhyay", "Shivam Tanna", "Nikhil Bhimani", "Himanshu Savaliya", "Deep Patel", "Abhishek Lakhani", "Anirudh Chauhan",
+            "Nilesh Kapadia", "Divyesh Desai", "Rahil Mistry", "Smit Vaghela", "Milan Gajera", "Kishan Kotadiya", "Prem Patel",
+            "Ajay Kher", "Ravi Khanna", "Swapnil Patil", "Yogesh Solanki", "Jay Mistry", "Alpesh Shah", "Manoj Chauhan", "Hemant Trivedi",
+            "Dinesh Parmar", "Lalit Mehta", "Hardik Gohil", "Mayur Rana", "Tushar Shah", "Vipul Bhatt", "Kaushal Panchal",
+            "Haresh Chavda", "Sanjay Patel", "Deepak Savsani", "Sankalp Makwana", "Sunil Purohit", "Ramesh Solanki", "Aayush Vyas",
+            "Bhavesh Jani", "Jignesh Raval", "Mitesh Choksi", "Milind Upadhyay", "Jagdish Dave", "Harshal Mistry", "Rajnikant Bhatt",
+            "Mahesh Parmar", "Prakash Modi", "Ashok Khunt", "Tarun Chavda"];
+    </script>
+    <div class="d1">
+        <div class="d2">
+            <script>
+                 n = parseInt(prompt('Enter Number Of Students:'));
+                 n1 = Math.floor(n / 2);
+                list_Of_Students();
+                function list_Of_Students() {
+                    for (i = 501; i <= 500+n1; i++) {
+                        if (i == 501) {
+                            document.write("&nbsp;&nbsp;&nbsp;RollNo.&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status<br>");
+                        }
+                        document.write("&nbsp;&nbsp;<span id='s" + i + "'>" + i + ". " + name[i - 501] + ": <input type='checkbox' id='p" + i + "' onclick='say_present();checkAttendace();'><label for='p" + i + "'> present</label>  <input type='checkbox' id='a" + i + "' onclick='say_absent();checkAttendace();'><label for='a" + i + "'> absent </label></span><br>")
+                    }
+                }
+            </script>
+        </div>
+        <div class="d3">
+            <script>
+                list_Of_Students();
+                function list_Of_Students() {
+                    for (i = n1+501; i <= 500+n; i++) {
+                        console.log("j");
+                        if (i == n1 + 501) {
+                            document.write("&nbsp;&nbsp;&nbsp;RollNo.&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status<br>");
+                        }
+                        document.write("&nbsp;&nbsp;<span id='s" + i + "'>" + i + ". " + name[i - 501] + ": <input type='checkbox' id='p" + i + "' onclick='say_present();checkAttendace();'><label for='p" + i + "'> present</label>  <input type='checkbox' id='a" + i + "' onclick='say_absent();checkAttendace();'><label for='a" + i + "'>absent</label></span><br>");
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <script>
+        a1 = 0;
+        ab_audio = new Audio("Absent.mp3");
+        pre_audio = new Audio("Present.mp3");
+        sel_any_one_audio = new Audio("Select_Any_One.mp3");
+        function say_present(){
+                pre_audio.play();
+         }
+         function say_absent(){
+             ab_audio.play();
+        }
+        function say_Select_Any_One(){
+            sel_any_one_audio.play();
+        } 
+        checkAttendace_Setter();
+        function checkAttendace_Setter() {
+            a1 = setInterval(checkAttendace, 10);
+        }
+        function checkAttendace() {
+            let total_absent = 0;
+            let total_present = 0;
+            total_Absent_RollNo = "";
+            for (i = 501; i <= 500+n; i++) {
+                let a2 = document.getElementById("p" + i);
+                let a3 = document.getElementById("a" + i);
+                let a4 = document.getElementById("s" + i);
+                a4.style.backgroundColor = "rgb(224, 222, 222)";
+                if (a2.checked && a3.checked) {
+                    say_Select_Any_One();
+                    alert('Please Select Any One.');
+                    a3.checked = false;
+                    a2.checked = false;
+                }
+                else {
+                    if (a2.checked && !a3.checked) {
+                        total_present++;
+                        a4.style.backgroundColor = "rgb(122, 240, 122)";  
+                    }
+                    if (a3.checked && !a2.checked) {
+                        total_Absent_RollNo += (i+",");
+                        total_absent++;
+                        a4.style.backgroundColor = "rgb(247, 105, 105)";
+                    }
+                }
+            }
+            d2 = document.getElementById("present_Students");
+            d3 = document.getElementById("absent_Students");
+            d4 = document.getElementById("pandding_Students");
+            d2.innerHTML = total_present;
+            d3.innerHTML = total_absent;
+            d4.innerHTML = n - total_absent - total_present;
+        }
+        function do_absent_Attendance() {
+            for (i = 501; i <= 500+n; i++) {
+                a2 = document.getElementById("p" + i);
+                a3 = document.getElementById("a" + i);
+                if (a2.checked) {
+                    a2.checked = false;
+                }
+                a3.checked = true;
+            }
+        }
+        function get_absent_Attendance(){
+            console.log("Total Abesent Roll No:"+total_Absent_RollNo);
+        }
+    </script>
+    <button class="btn1" onclick="do_absent_Attendance()">Reset Attendance</button>
+    <button class="btn2" onclick="get_absent_Attendance()">Get Result</button> 
+</body>
+
+</html>

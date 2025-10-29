@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<script>
+		document.onmousedown = function(event){//here this is anonimous function IMP to learn it's syntext.
+			if(event.button===0){
+				alert('Left-Click');
+			}
+			else if(event.button===2){
+				alert('Right-Click');
+			}
+		};//here semicolon is optional
+		document.oncontextmenu = function(event){
+			return false;
+		};//here semicolon is optional
+	</script>
+</body>
+</html>

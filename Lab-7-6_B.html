@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body><!--IMP for Theory Basis-->
+	<script>// 6. Demonstrate the Array and Object Destructuring. (B)
+		//Object Destructuring 
+		Obj = {
+			name : "jash",
+			roll_no : 501,
+			batch : 1
+		}
+		const {name , batch} = Obj;
+		console.log(name);
+		console.log(batch);
+
+		//Array Destructuring
+		Student = ["Jash","Savsani",501,20,"Bsc.(Hons).C.S"];
+		let [fn,ln,roll_no,dept] = Student;
+		console.log("Student Info:");
+		console.log(fn);
+		console.log(ln);
+		console.log(roll_no);
+		console.log(dept);
+	</script>
+</body>
+</html>

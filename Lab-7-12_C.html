@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text_type">
+    <button onclick="add_Students()">Add</button>
+    <div id="result"></div>
+    <script>
+        students=[];
+        function add_Students(){
+            stu_name = document.getElementById("text_type");
+            students.push(stu_name.value);
+            stu_name.value = "";
+            console.log(students);
+            displayResult();
+        }
+        function displayResult(){
+            temp = document.getElementById("result");
+            tempString="<table border='1'>"
+            for(i=0;i<students.length;i++){
+                tempString+="<tr>";
+                tempString+="<td>";
+                tempString+=students[i];
+                tempString+="</td>";
+                tempString+="<td>";
+                tempString+="<button onclick='deleteStudents("+i+")'>Delete<button>"
+                tempString+="</td>";
+                tempString+="<td>";
+                tempString+="<button onclick='setStudents("+i+")'>Edit<button>"
+                tempString+="</td>";  
+                tempString+="</tr>";
+            }
+            tempString+="</table>"
+            temp.innerHTML=tempString;
+        }
+        function deleteStudents(id){
+            students.splice(id,1);
+            displayResult();
+        }
+        function setStudents(id){
+            new_name = prompt('Enter New Name:');
+            students[id] = new_name;
+            displayResult();
+        }
+    </script>
+</body>
+</html>

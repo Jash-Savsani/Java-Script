@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>//WAP to demonstrate callbacks in JavaScript
+		function Sum(a2,b2){
+			console.log("a+b=",a2+b2);
+		}
+		function Calculation(a1,b1,callback){
+			callback(a1,b1);
+		}
+		Calculation(25,10,Sum);
+	</script>
+</body>
+</html>
